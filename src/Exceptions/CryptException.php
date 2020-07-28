@@ -1,6 +1,6 @@
 <?php
 
-namespace Sim\Exceptions\Crypt;
+namespace Sim\Crypt\Exceptions;
 
 
 use Exception;
