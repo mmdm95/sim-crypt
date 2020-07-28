@@ -3,7 +3,7 @@
 namespace Sim\Crypt;
 
 
-use Sim\Exceptions\Crypt\CryptException;
+use Sim\Crypt\Exceptions\CryptException;
 
 class Crypt implements ICrypt
 {
