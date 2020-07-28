@@ -1,20 +1,21 @@
 {
-    "name": "mmdm/sim-crypt",
-    "description": "A simple yet nice encryption/decryption library",
-    "type": "library",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "MMDM",
-            "email": "mmdehghan95@gmail.com"
-        }
-    ],
-    "require": {
-        "php": ">=7.2"
-    },
-    "autoload": {
-        "psr-4": {
-            "Sim\\Crypt\\": "src/"
-        }
+  "name": "mmdm/sim-crypt",
+  "description": "A simple yet nice encryption/decryption library",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "MMDM",
+      "email": "mmdehghan95@gmail.com"
     }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "ext-openssl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sim\\Crypt\\": "src/"
+    }
+  }
 }
