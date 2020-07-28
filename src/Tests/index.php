@@ -1,7 +1,7 @@
 <?php
 
 use Sim\Crypt\Crypt;
-use Sim\Exceptions\Crypt\CryptException;
+use Sim\Crypt\Exceptions\CryptException;
 
 include_once '../../vendor/autoload.php';
 
