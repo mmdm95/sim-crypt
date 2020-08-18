@@ -2,7 +2,6 @@
 
 namespace Sim\Crypt;
 
-
 interface ICrypt
 {
     /**
