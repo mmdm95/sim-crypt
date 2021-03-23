@@ -45,6 +45,42 @@ class Crypt implements ICrypt
     }
 
     /**
+     * @param string $first_method - see openssl_get_cipher_methods() for valid methods
+     * @return static
+     */
+    public function setFirstEncryptionMethod(string $first_method)
+    {
+        $this->encrypt_fst_method = $first_method;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFirstEncryptionMethod(): string
+    {
+        return $this->encrypt_fst_method;
+    }
+
+    /**
+     * @param string $second_method - see openssl_get_cipher_methods() for valid methods
+     * @return static
+     */
+    public function setSecondEncryptionMethod(string $second_method)
+    {
+        $this->encrypt_snd_method = $second_method;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSecondEncryptionMethod(): string
+    {
+        return $this->encrypt_snd_method;
+    }
+
+    /**
      * Encrypt the given $data
      *
      * @param string $data

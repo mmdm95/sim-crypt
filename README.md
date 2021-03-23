@@ -45,7 +45,27 @@ to make them base64.
 
 ## Available functions
 
-encrypt($data):
+`setFirstEncryptionMethod(string $first_method)`
+
+You can set first encryption method from valid encryption methods. 
+See `openssl_get_cipher_methods()` PHP built-in function for 
+supported methods.
+
+`getFirstEncryptionMethod(): string`
+
+Get first encryption method.
+
+`setSecondEncryptionMethod(string $second_method)`
+
+You can set second encryption method from valid encryption methods. 
+See `openssl_get_cipher_methods()` PHP built-in function for 
+supported methods.
+
+`getSecondEncryptionMethod(): string`
+
+Get second encryption method.
+
+`encrypt($data)`
 
 This method encrypts a message and return encrypted value or 
 false if $data is empty or is not a string
@@ -54,7 +74,7 @@ false if $data is empty or is not a string
 $encrypted_message = $crypt->encrypt($message_to_encrypt);
 ```
 
-decrypt($data):
+`decrypt($data)`
 
 This method decrypts an encrypted message and return actual 
 message or false if $data is empty or is not a string or an error 
@@ -64,7 +84,7 @@ happened during decode step.
 $decrypted_message = $crypt->decrypt($encrypted_message);
 ``` 
 
-hasError():
+`hasError()`
 
 This function return a boolean indicates operation has error or not.
 
