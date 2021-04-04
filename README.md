@@ -65,19 +65,19 @@ supported methods.
 
 Get second encryption method.
 
-`encrypt($data)`
+`encrypt($data): ?string`
 
 This method encrypts a message and return encrypted value or 
-false if $data is empty or is not a string
+`null` if $data is an empty string
 
 ```php
 $encrypted_message = $crypt->encrypt($message_to_encrypt);
 ```
 
-`decrypt($data)`
+`decrypt($data): ?string`
 
 This method decrypts an encrypted message and return actual 
-message or false if $data is empty or is not a string or an error 
+message or `null` if $data is an empty string or an error 
 happened during decode step.
 
 ```php

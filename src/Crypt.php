@@ -86,11 +86,11 @@ class Crypt implements ICrypt
      * @param string $data
      * @return string
      */
-    public function encrypt(string $data): string
+    public function encrypt(string $data): ?string
     {
-        if (!is_string($data) || empty($data)) {
+        if ('' === $data) {
             $this->has_error = true;
-            return false;
+            return null;
         }
 
         // Decode crypt keys
@@ -121,11 +121,11 @@ class Crypt implements ICrypt
      * @param string $data
      * @return mixed
      */
-    public function decrypt(string $data): string
+    public function decrypt(string $data): ?string
     {
-        if (!is_string($data) || empty($data)) {
+        if ('' === $data) {
             $this->has_error = true;
-            return false;
+            return null;
         }
 
         // Decode crypt keys
@@ -158,7 +158,7 @@ class Crypt implements ICrypt
 
         // Otherwise it has modified
         $this->has_error = true;
-        return false;
+        return null;
     }
 
     /**

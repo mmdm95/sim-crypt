@@ -8,17 +8,17 @@ interface ICrypt
      * Encrypt the given $data
      *
      * @param string $data
-     * @return string
+     * @return string|null
      */
-    public function encrypt(string $data): string;
+    public function encrypt(string $data): ?string;
 
     /**
      * Decrypt the given $data
      *
      * @param string $data
-     * @return string
+     * @return string|null
      */
-    public function decrypt(string $data): string;
+    public function decrypt(string $data): ?string;
 
     /**
      * Return true if encryption/decryption has error in it
